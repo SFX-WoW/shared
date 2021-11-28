@@ -4,6 +4,7 @@
 
 std = 'lua51'
 codes = true
+quiet = 1
 max_line_length = false
 
 ----------------------------------------
