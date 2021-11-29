@@ -1,0 +1,18 @@
+# A reusable, stand-alone workflow for manual linting.
+name: Linter
+
+on: workflow_call
+
+jobs:
+  lint:
+    name: Run LuaCheck
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Project
+        uses: actions/checkout@v2
+
+      - name: Process Files
+        uses: BigWigsMods/actions/luacheck@master
+        with:
+          config: https://raw.githubusercontent.com/SFX-WoW/shared/main/config/.luacheckrc
