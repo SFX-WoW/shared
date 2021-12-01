@@ -1,0 +1,28 @@
+# Builds a release.
+name: Build Package
+
+on: workflow_call
+
+jobs:
+  build:
+    name: Build Package
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Project
+        uses: actions/checkout@v1
+        with:
+          fetch-depth: 100
+
+      - name: Run LuaCheck
+        uses: BigWigsMods/actions/luacheck@master
+        with:
+          config: https://raw.githubusercontent.com/SFX-WoW/shared/main/config/.luacheckrc
+
+      - name: Run Packager
+        uses: BigWigsMods/packager@multitoc
+        env:
+          CF_API_KEY: ${{ secrets.CF_API_KEY }}
+          GITHUB_OAUTH: ${{ secrets.GITHUB_TOKEN }}
+          WAGO_API_TOKEN: ${{ secrets.WAGO_API_TOKEN }}
+          WOWI_API_TOKEN: ${{ secrets.WOWI_API_TOKEN }}

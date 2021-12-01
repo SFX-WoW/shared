@@ -1,4 +1,4 @@
-# A reusable, stand-alone workflow for manual linting.
+# A reusable workflow for linting.
 name: Linter
 
 on: workflow_call

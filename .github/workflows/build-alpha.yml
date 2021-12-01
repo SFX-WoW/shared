@@ -1,25 +1,25 @@
-# A reusable workflow for packaging dev builds.
-name: Build Test
+# Builds an alpha release.
+name: Build Package (Alpha)
 
 on: workflow_call
 
 jobs:
-  package:
+  build:
     name: Build Package
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout Project
         uses: actions/checkout@v1
-          with:
-            fetch-depth: 100
+        with:
+          fetch-depth: 100
 
       - name: Run LuaCheck
         uses: BigWigsMods/actions/luacheck@master
         with:
           config: https://raw.githubusercontent.com/SFX-WoW/shared/main/config/.luacheckrc
 
-      - name: Build Package
+      - name: Run Packager
         uses: BigWigsMods/packager@multitoc
         env:
           CF_API_KEY: ${{ secrets.CF_API_KEY }}
