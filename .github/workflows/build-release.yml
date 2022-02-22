@@ -1,7 +1,15 @@
 # Builds a release.
 name: Build Package
 
-on: workflow_call
+on:
+  workflow_call:
+    secrets:
+      CF_API_KEY:
+        required: true
+      WAGO_API_TOKEN:
+        required: true
+      WOWI_API_TOKEN:
+        required: true
 
 jobs:
   build:
@@ -12,7 +20,7 @@ jobs:
       - name: Checkout Project
         uses: actions/checkout@v1
         with:
-          fetch-depth: 100
+          fetch-depth: 50
 
       - name: Run LuaCheck
         uses: BigWigsMods/actions/luacheck@master
@@ -20,7 +28,7 @@ jobs:
           config: https://raw.githubusercontent.com/SFX-WoW/shared/main/config/.luacheckrc
 
       - name: Run Packager
-        uses: BigWigsMods/packager@multitoc
+        uses: BigWigsMods/packager@v2
         env:
           CF_API_KEY: ${{ secrets.CF_API_KEY }}
           GITHUB_OAUTH: ${{ secrets.GITHUB_TOKEN }}
