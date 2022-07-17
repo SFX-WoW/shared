@@ -1,5 +1,5 @@
 # Builds an alpha release.
-name: Build Package (Alpha)
+name: Build Package
 
 on: workflow_call
 
@@ -10,9 +10,7 @@ jobs:
 
     steps:
       - name: Checkout Project
-        uses: actions/checkout@v1
-        with:
-          fetch-depth: 50
+        uses: actions/checkout@v3
 
       - name: Run LuaCheck
         uses: BigWigsMods/actions/luacheck@master
