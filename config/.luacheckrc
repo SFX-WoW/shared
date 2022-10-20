@@ -64,6 +64,7 @@ read_globals = {
 	"InterfaceOptionsFrame_OpenToCategory",
 	"InterfaceOptionsFrame_Show",
 	"ReloadUI",
+	"SettingsPanel",
 	"UIParent",
 
 	-- Libraries
