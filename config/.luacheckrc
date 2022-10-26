@@ -55,6 +55,7 @@ read_globals = {
 	-- WoW API
 	"BackdropTemplateMixin",
 	"CreateFrame",
+	"ContainerFrame_GetContainerNumSlots",
 	"GameTooltip",
 	"GetAddOnMetadata",
 	"GetBuildInfo",
