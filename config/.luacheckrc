@@ -53,7 +53,9 @@ read_globals = {
 	"random",
 
 	-- WoW API
+	"AddonCompartmentFrame",
 	"BackdropTemplateMixin",
+	"C_AddOns.GetAddOnMetadata",
 	"CreateFrame",
 	"ContainerFrame_GetContainerNumSlots",
 	"GameTooltip",
