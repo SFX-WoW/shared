@@ -4,8 +4,8 @@
 
 std = 'lua51'
 codes = true
-quiet = 1
 max_line_length = false
+quiet = 1
 
 ----------------------------------------
 -- File Exclusions
@@ -20,14 +20,11 @@ exclude_files = {
 -- Warning Filters
 ---
 
-only = {
-	"011", -- Syntax Error
-	"1",   -- Undefined Global
-}
-
 ignore = {
-	"11./SLASH_.*", -- Slash Handler
-	"1/[A-Z][A-Z][A-Z0-9_]+", -- Constant
+	"11./SLASH_.*", -- Setting an undefined global variable. (Slash Handler)
+	"212", -- An unused argument.
+	"42.", -- Shadowing a local variable, an argument or a loop variable.
+	"43.", -- Shadowing an upvalue, an upvalue argument or an upvalue loop variable.
 }
 
 ----------------------------------------
@@ -47,25 +44,21 @@ read_globals = {
 	-- Only include those that are being used.
 
 	-- WoW Lua
-	"assert",
 	"hooksecurefunc",
-	"print",
 	"random",
 
 	-- WoW API
+	"ActionBarActionEventsFrame",
+	"ActionButton_HideOverlayGlow",
 	"AddonCompartmentFrame",
-	"BackdropTemplateMixin",
-	"C_AddOns.GetAddOnMetadata",
-	"CreateFrame",
+	"C_Timer",
 	"ContainerFrame_GetContainerNumSlots",
-	"GameTooltip",
-	"GetAddOnMetadata",
+	"CreateFrame",
+	"GameMenuFrame",
 	"GetBuildInfo",
 	"GetLocale",
+	"HideUIPanel",
 	"InCombatLockdown",
-	"InterfaceOptionsFrame",
-	"InterfaceOptionsFrame_OpenToCategory",
-	"InterfaceOptionsFrame_Show",
 	"ReloadUI",
 	"SettingsPanel",
 	"UIParent",
