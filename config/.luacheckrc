@@ -51,6 +51,7 @@ read_globals = {
 	"ActionBarActionEventsFrame",
 	"ActionButton_HideOverlayGlow",
 	"AddonCompartmentFrame",
+	"C_Container",
 	"C_Timer",
 	"ContainerFrame_GetContainerNumSlots",
 	"CreateFrame",
