@@ -50,6 +50,7 @@ read_globals = {
 	-- WoW API
 	"ActionBarActionEventsFrame",
 	"ActionButton_HideOverlayGlow",
+	"ActionButtonSpellAlertManager",
 	"AddonCompartmentFrame",
 	"C_Container",
 	"C_Timer",
