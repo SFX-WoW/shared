@@ -52,6 +52,7 @@ read_globals = {
 	"ActionButton_HideOverlayGlow",
 	"ActionButtonSpellAlertManager",
 	"AddonCompartmentFrame",
+	"AssistedCombatManager",
 	"C_Container",
 	"C_Timer",
 	"ContainerFrame_GetContainerNumSlots",
