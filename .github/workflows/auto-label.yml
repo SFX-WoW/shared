@@ -14,7 +14,7 @@ jobs:
   labeling-logic:
     runs-on: ubuntu-latest
     steps:
-      - name: Apply Labels based on Token
+      - name: Apply Labels
         uses: actions-ecosystem/action-add-labels@v1
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
