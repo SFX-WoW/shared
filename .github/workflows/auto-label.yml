@@ -11,7 +11,7 @@ on:
         type: number
 
 jobs:
-  labeling-logic:
+  apply-labels:
     runs-on: ubuntu-latest
     steps:
       - name: Apply Labels
