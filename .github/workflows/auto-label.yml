@@ -6,8 +6,10 @@ on:
 jobs:
   auto-label:
     runs-on: ubuntu-latest
+
     permissions:
       issues: write
+
     steps:
       - name: Apply "New" Label
         uses: actions-ecosystem/action-add-labels@v1
