@@ -1,4 +1,3 @@
-# Builds a release.
 name: Build Package
 
 on:

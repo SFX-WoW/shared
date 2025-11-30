@@ -1,0 +1,15 @@
+name: Auto-Label
+
+on:
+  workflow_call:
+
+jobs:
+  auto-label:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+    steps:
+      - name: Apply "New" Label
+        uses: actions-ecosystem/action-add-labels@v1
+        with:
+          labels: New
