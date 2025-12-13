@@ -64,6 +64,7 @@ read_globals = {
 	"InCombatLockdown",
 	"ReloadUI",
 	"SettingsPanel",
+	"StartChargeCooldown",
 	"UIParent",
 
 	-- Libraries
