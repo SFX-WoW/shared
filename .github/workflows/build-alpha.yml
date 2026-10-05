@@ -22,4 +22,4 @@ jobs:
           GITHUB_OAUTH: ${{ secrets.GITHUB_TOKEN }}
           CF_API_KEY: ${{ secrets.CF_API_KEY }}
         with:
-          args: -a 0 -p 0 -w 0
+          args: -a 0 -w 0 -L
