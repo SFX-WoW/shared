@@ -25,6 +25,7 @@ ignore = {
 	"212", -- An unused argument.
 	"42.", -- Shadowing a local variable, an argument or a loop variable.
 	"43.", -- Shadowing an upvalue, an upvalue argument or an upvalue loop variable.
+	"542", -- Empty if branch.
 }
 
 ----------------------------------------
