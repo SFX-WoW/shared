@@ -1,6 +1,9 @@
 name: Build Package
 
 on: workflow_call
+    secrets:
+      CF_API_KEY:
+        required: true
 
 jobs:
   build:
