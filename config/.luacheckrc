@@ -22,7 +22,8 @@ exclude_files = {
 
 ignore = {
 	"11./SLASH_.*", -- Setting an undefined global variable. (Slash Handler)
-	"212", -- An unused argument.
+	"211", -- unused-local
+	"212", -- unused-argument
 	"42.", -- Shadowing a local variable, an argument or a loop variable.
 	"43.", -- Shadowing an upvalue, an upvalue argument or an upvalue loop variable.
 	"542", -- Empty if branch.
